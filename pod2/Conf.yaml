@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-2
+spec:
+  containers:
+  - name: nodejs-app
+    image: node:latest
+    resources:
+      limits:
+        cpu: "1"
+        memory: "512Mi"
+    command: ["node", "BurbujaBinaria.js"]
+    ports:
+    - containerPort: 3505
